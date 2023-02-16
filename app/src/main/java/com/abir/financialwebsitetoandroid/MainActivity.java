@@ -27,4 +27,12 @@ public class MainActivity extends AppCompatActivity {
         web.loadUrl("https://ismielabir.github.io/Financial-Ratio/");
 
     }
+
+    @Override
+    public void onBackPressed() {
+        if(web.canGoBack())
+            web.goBack();
+        else
+            super.onBackPressed();
+    }
 }
